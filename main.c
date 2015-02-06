@@ -8,12 +8,10 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-#define DEBUG 1
 
 typedef unsigned char byte;
 
 /*Operators*/
-
 #define INCREMENT_PTR '>'
 #define	DECREMENT_PTR '<'
 #define	INCREMENT_VAL '+'
@@ -29,7 +27,7 @@ typedef unsigned char byte;
 #define MAX_NUMBER_CELLS 30000 //Each cells are a single byte
 #define MAX_CODE_SIZE 100000 //Max size of the source code, that should be enough
 
-byte Cells[MAX_NUMBER_CELLS]; //We will have to null them
+byte Cells[MAX_NUMBER_CELLS]; //We will have to zero them
 
 int main(int argc, char** argv){
 
@@ -107,7 +105,7 @@ int main(int argc, char** argv){
 			break;
 
 
-			/*tricky*/
+			
 		case START_LOOP:
 			if (Cells[curCell] == 0){
 				for (int a = i; a < srcLen; a++){
